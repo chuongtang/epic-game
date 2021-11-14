@@ -4,10 +4,10 @@ const main = async () => {
   const gameContractFactory = await hre.ethers.getContractFactory('MyEpicGame');
   const gameContract = await gameContractFactory.deploy(
     ["TangXuanZang", "SunWuKong", "ZhuBajie", "ShaWuJing"],       // Names
-    ["https://chuongtang.github.io/sourceStore/CharImg/TangXuanZang.png", // Images
-      "https://chuongtang.github.io/sourceStore/CharImg/SunWuKong.png",
-      "https://chuongtang.github.io/sourceStore/CharImg/ZhuBaJie.png",
-      "https://chuongtang.github.io/sourceStore/CharImg/ShaWuJing.png"],
+    ["QmdJtXhHAUbE7fyNMQVekcVUgBAyBxYwmebzxm6hse5oew", // Images
+      "QmPmdR37h7oYVEqBos1bugZ5YnHkyk8BLSjrwXDMxvcwXy",
+      "QmeYvoprGkrJ6SihnaTDpezm6FSMzFHGa3GS8jdHYN38tp",
+      "Qmc3WCj3wGFBZfRc2JPrzJV1muwV7bk7kJkrcBNkpSHE3a"],
     [50, 300, 200, 100],                    // HP values
     [25, 100, 100, 50],   // Attack damage values
     "DemonLord",
