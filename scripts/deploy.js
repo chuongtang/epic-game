@@ -2,6 +2,7 @@ const colors = require('colors');
 
 const main = async () => {
   const gameContractFactory = await hre.ethers.getContractFactory('MyEpicGame');
+
   const gameContract = await gameContractFactory.deploy(
     ["TangXuanZang", "SunWuKong", "ZhuBajie", "ShaWuJing"],       // Names
     ["https://chuongtang.github.io/sourceStore/CharImg/TangXuanZang.png", // Images
@@ -18,17 +19,17 @@ const main = async () => {
   await gameContract.deployed();
   console.log("Contract deployed to:".green, gameContract.address.yellow);
 
-  let txn;
-  txn = await gameContract.mintCharacterNFT(1);
-  await txn.wait();
+  // let txn;
+  // txn = await gameContract.mintCharacterNFT(1);
+  // await txn.wait();
 
-  txn = await gameContract.attackDemon();
-  await txn.wait();
+  // txn = await gameContract.attackDemon();
+  // await txn.wait();
   
-  txn = await gameContract.attackDemon();
-  await txn.wait();
+  // txn = await gameContract.attackDemon();
+  // await txn.wait();
 
-  console.log("Done attacking!".bgBlue)
+  // console.log("Done attacking!".bgBlue)
   /*"tokenURI" is the function inherited from ERC721*/
   // // Get the value of the NFT's URI.
   // let returnedTokenUri = await gameContract.tokenURI(1);

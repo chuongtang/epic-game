@@ -2,6 +2,7 @@
 The goal of our game will be to destroy a boss. Let's say that boss has 1,000,000 HP. What players do is when they start the game, they mint a character NFT that has a certain amount of Attack Damage and HP. Players can order their character NFT to attack the boss and deal damage to it. Kinda like a Pokemon!
 
 Contract deployed to: 0x7c32219243B8784BA791Ebc9509bD84E4176A3b4
+Contract deployed to: 0xc4DE84064A33fB72A5A6E9478dD939316d37313B
 # Basic Sample Hardhat Project
 
 This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
