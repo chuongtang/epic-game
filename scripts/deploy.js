@@ -31,9 +31,9 @@ const main = async () => {
 
   // console.log("Done attacking!".bgBlue)
   /*"tokenURI" is the function inherited from ERC721*/
-  // // Get the value of the NFT's URI.
-  // let returnedTokenUri = await gameContract.tokenURI(1);
-  // console.log("Token URI:".bgBlue, returnedTokenUri);
+  // Get the value of the NFT's URI.
+  let returnedTokenUri = await gameContract.tokenURI(1);
+  console.log("Token URI:".bgBlue, returnedTokenUri);
 };
 
 const runMain = async () => {
