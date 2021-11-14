@@ -19,6 +19,9 @@ contract MyEpicGame is ERC721 {
   using Counters for Counters.Counter;
   Counters.Counter private _tokenIds;
 
+  event CharacterNFTMinted(address sender, uint256 tokenId, uint256 characterIndex);
+  event AttackComplete(uint newDemonHp, uint newPlayerHp);
+
   struct CharacterAttributes {
     uint characterIndex;
     string name;
@@ -129,6 +132,8 @@ Demon public demon;
     Increment the tokenId for the next person that uses it.
     OpenZeppelin gives ⇩ function  */
     _tokenIds.increment();
+
+    emit CharacterNFTMinted(msg.sender, newItemId, _characterIndex);
   }
 
   function tokenURI(uint256 _tokenId) public view override returns (string memory) {
@@ -203,7 +208,34 @@ function attackDemon() public {
   // Console for ease.
   console.log("Player attacked Demon. New demon hp: %s", demon.hp);
   console.log("Demon attacked player. New player hp: %s\n", player.hp);
+  emit AttackComplete(demon.hp, player.hp);
+}
 
+
+/* check if a user has a character NFT we've given them, and then retrieve the NFT's attributes
+ if NOT, prompt user to mint one */
+function checkIfUserHasNFT() public view returns (CharacterAttributes memory) {
+  // Get the tokenId of the user's character NFT
+  uint256 userNftTokenId = nftHolders[msg.sender];
+  // If the user has a tokenId in the map, return their character.
+  if (userNftTokenId > 0) {
+    return nftHolderAttributes[userNftTokenId];
+  }
+  // Else, return an empty character.
+  else {
+    CharacterAttributes memory emptyStruct;
+    return emptyStruct;
+   }
+}
+
+function getAllDefaultCharacters() public view returns (CharacterAttributes[] memory) {
+  return defaultCharacters;
+}
+
+
+// Retrieve Demon and display its attributes dring the game
+function getDemon() public view returns (Demon memory) {
+  return demon;
 }
 
 }

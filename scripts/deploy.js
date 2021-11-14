@@ -28,7 +28,7 @@ const main = async () => {
   txn = await gameContract.attackDemon();
   await txn.wait();
 
-  console.log("Done attacking!".bgYellow)
+  console.log("Done attacking!".bgBlue)
   /*"tokenURI" is the function inherited from ERC721*/
   // // Get the value of the NFT's URI.
   // let returnedTokenUri = await gameContract.tokenURI(1);
