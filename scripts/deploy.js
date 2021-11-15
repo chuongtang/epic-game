@@ -9,7 +9,7 @@ const main = async () => {
       "https://chuongtang.github.io/sourceStore/CharImg/SunWuKong.png",
       "https://chuongtang.github.io/sourceStore/CharImg/ZhuBaJie.png",
       "https://chuongtang.github.io/sourceStore/CharImg/ShaWuJing.png"],
-    [50, 300, 200, 100],                    // HP values
+    [50, 500, 300, 200],                    // HP values
     [25, 100, 100, 50],   // Attack damage values
     "DemonLord",
     "https://chuongtang.github.io/sourceStore/CharImg/Demon.png",
