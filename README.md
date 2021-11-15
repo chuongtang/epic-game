@@ -3,7 +3,7 @@ The goal of this game is to destroy a **Demon**. Let's say that **Demon** has 1,
 
 Characters in this game are based on the novel [Journey to the West](https://en.wikipedia.org/wiki/Journey_to_the_West)
 
-***Smart Contract deployed to***: `0xb822759AA0De01F4391FaA98aeE2C83d2F06EaB9`
+***Smart Contract deployed to***: `0x9128eDcd0adb20FE69B5E82df5462a4B5163bcCE`
 
 
 # Basic Sample Hardhat Project
